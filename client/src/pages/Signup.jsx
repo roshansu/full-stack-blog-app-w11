@@ -33,7 +33,7 @@ const Signup = () => {
     setPopup({
       type: "pending",
       open: false,
-      msg: "Deleting Please wait..."
+      msg: "Please wait..."
     });
   };
 

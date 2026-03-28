@@ -19,7 +19,7 @@ const Home = () => {
     setPopup({
       type: "pending",
       open: false,
-      msg: "Deleting Please wait..."
+      msg: "Posting Please wait..."
     });
   };
 
