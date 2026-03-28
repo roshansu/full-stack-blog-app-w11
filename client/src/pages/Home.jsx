@@ -4,6 +4,7 @@ import AddPost from "../components/AddPost";
 import { useState, useEffect } from "react";
 import { getPostApi, postApi } from "../api/api";
 import Popup from "../components/Popup";
+import Spinner from "../components/Spinner";
 
 const Home = () => {
   const [open, setOpen] = useState(false);
@@ -64,7 +65,7 @@ const Home = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading</div>;
+    return <Spinner/>;
   }
   return (
     <div className="pt-14 bg-gray-100">

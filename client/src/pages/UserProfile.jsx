@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { getToken } from '../libs/localStorage';
 import { getPostApi } from '../api/api';
 import PostCard from '../components/PostCard';
+import Spinner from '../components/Spinner';
 
 const UserProfile = () => {
  const [postData, setPostData] = useState([])
@@ -30,7 +31,7 @@ const UserProfile = () => {
 
     <div className="min-h-screen flex items-center flex-wrap gap-4 justify-center ">
       {
-        loading?<div>Loading post</div>:(postData.length === 0?<div>No post is available</div>
+        loading?<Spinner/>:(postData.length === 0?<div>No post is available</div>
         : postData.map((post)=>(
           <PostCard post={post} key={post._id} />
         )))
