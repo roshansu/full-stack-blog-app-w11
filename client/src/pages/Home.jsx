@@ -17,7 +17,9 @@ const Home = () => {
 
   const closePopup = () => {
     setPopup({
+      type: "pending",
       open: false,
+      msg: "Deleting Please wait..."
     });
   };
 

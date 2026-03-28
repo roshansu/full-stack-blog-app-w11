@@ -20,8 +20,9 @@ const Login = () => {
 
   const closePopup = () => {
     setPopup({
-      ...popup,
+      type: "pending",
       open: false,
+      msg: "Deleting Please wait..."
     });
   };
 
